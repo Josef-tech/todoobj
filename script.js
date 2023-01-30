@@ -23,7 +23,7 @@ class ManageList {
     }
 
     generateTaskLine(value) {
-        const taskBlock = document.createElement('div');
+        const taskBlock = document.createElement('form');
         const dragPoint = document.createElement('div');
         const inputLine = document.createElement('input');
         const cancelTask = document.createElement('div');
@@ -31,12 +31,14 @@ class ManageList {
         taskBlock.classList.add('input');
         dragPoint.classList.add('drag');
         inputLine.classList.add('task');
+        inputLine.type = 'text';
         inputLine.name = 'task';
         inputLine.value = value;
         cancelTask.classList.add('cancel-task');
 
         dragPoint.addEventListener('mousedown', this.moveTaskLine);
         cancelTask.addEventListener('click', event => this.deleteTaskLine(event));
+        taskBlock.addEventListener('submit', this.handleSubmit);
 
         taskBlock.append(dragPoint);
         taskBlock.append(inputLine);
@@ -44,6 +46,11 @@ class ManageList {
 
         return taskBlock;
     }
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
 
     sortList = () => {
         this.sortIcon.classList.toggle('sorted');
