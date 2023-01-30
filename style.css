@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+}
+main{
+    width: 336px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.add-task{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.add-task header .yellow-line{
+    height: 28px;
+    background-color: #FFDC40;
+    border: none;
+}
+.add-task header h1{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 17px;
+    padding: 5px;
+    color: #000000;
+}
+.add-task .sort{
+    margin-top: 12px;
+    height: 15px;
+    width: 25px;
+    margin-left: 281px;
+    margin-bottom: 11px;
+}
+.sort:hover{
+    cursor: pointer;
+}
+.unsorted{
+    background-image: url(img/inactiveDown.png);
+}
+.sorted{
+    background-image: url(img/avtiveDown.png);
+}
+.add-task .input{
+    border: none;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: all .1s linear;
+}
+input{
+    height: 100%;
+    width: 70%;
+    border: none;
+    background: none;
+}
+.add-task .button{
+    background: #833AE0;
+    border-radius: 71px;
+    width: 150px;
+    height: 42px;
+    margin: 18px auto 19px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border: none;
+}
+.button .add{
+    background: #9953F1;
+    border-radius: 71px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+}
+.button .text{
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 12px;
+}
+.list{
+    width: 286px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+}
+.drag{
+    width: 12px;
+    height: 12px;
+    background-image: url(img/drag.png);
+    cursor: move;
+    margin: 14px 15px;
+    background-repeat: no-repeat;
+}
+.list .task{
+    width: 200px;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+}
+.cancel-task{
+    background-image: url(img/cancel.png);
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+.cancel-task:hover{
+    background-image: url(img/activeCancel.png);
+}
